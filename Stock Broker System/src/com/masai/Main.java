@@ -27,4 +27,17 @@ public class Main {
     	Map<Integer, Customer> customers = FileExists.customerFile();
     	
 	}
+    public static void customerLogin(Scanner sc)throws InvalidDetailsException {
+    	System.out.println("Enter the user name");
+		String userName = sc.next();
+		System.out.println("Enter the password");
+		String password = sc.next();
+		
+		if (userName.equals(Admin.username) && password.equals(Admin.password)) {
+
+			System.out.println("successfully login");
+		} else {
+			throw new InvalidDetailsException("Invalid Admin Credentials");
+		}
+    }
 }
