@@ -1,6 +1,8 @@
 package com.masai.utility;
 
-public class IDGeneration {
+import java.io.Serializable;
+
+public class IDGeneration implements Serializable{
 	public static int generateId() {
 
 		// random function generates value between 0.0000111 to 0.9999
