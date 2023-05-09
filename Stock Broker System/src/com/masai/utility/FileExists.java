@@ -17,9 +17,9 @@ import com.masai.entities.Transaction;
 
 public class FileExists {
 
-	public static Map<Integer, Customer> customerFile() {
+	public static Map<String, Customer> customerFile() {
 
-		Map<Integer, Customer> cFile = null;
+		Map<String, Customer> cFile = null;
 
 		File f = new File("Customer.ser");
 		boolean flag = false;
@@ -40,7 +40,7 @@ public class FileExists {
 			} else {
 
 				ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f));
-				cFile = (Map<Integer, Customer>) ois.readObject();
+				cFile = (Map<String, Customer>) ois.readObject();
 
 				return cFile;
 
@@ -51,5 +51,80 @@ public class FileExists {
 			System.out.println(e.getMessage());
 		}
 		return cFile;
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////     For transaction  //////////////////////////////////////////////////////////////////////////////////
+	public static List<Transaction> transactionFile() {
+
+		List<Transaction> tFile = new ArrayList<>();
+
+		File f = new File("Transactions.ser");
+		boolean flag = false;
+		try {
+			if (!f.exists()) {
+				f.createNewFile();
+				flag = true;
+			}
+
+			if (flag) {
+				tFile =  new ArrayList<>();
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f));
+				oos.writeObject(tFile);
+
+				return tFile;
+
+			} else {
+
+				ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f));
+				tFile = (List<Transaction>) ois.readObject();
+				return tFile;
+
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+
+		return tFile;
+
+	}
+	
+///////////////////////*******************************************************************************************//////////////
+	
+	public static Map<String, List<Stock>> stockFile() {
+
+		Map<String, List<Stock>> pFile = null;
+
+		File f = new File("Stock.ser");
+		boolean flag = false;
+		try {
+			if (!f.exists()) {
+				f.createNewFile();
+				flag = true;
+			}
+			
+
+			if (flag) {
+
+				pFile = new LinkedHashMap<>();
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f));
+				oos.writeObject(pFile);
+				return pFile;
+
+			} else {
+
+				ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f));
+				pFile = (Map<String, List<Stock>>) ois.readObject();
+
+				return pFile;
+
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		return pFile;
 	}
 }

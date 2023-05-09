@@ -8,18 +8,19 @@ public class Customer implements Serializable{
 	private String mobileNumber;
 	private String password;
 	private String address;
-	private int walletBalance=0;
-	private Map<String,Integer> stock= new HashMap<>();
-	private List<String> transaction= new ArrayList<>();
-	public Customer(String firstName, String lastName, String email, String mobileNumber, String password,
-			String address) {
-		super();
+	private int walletBalance;
+	private Map<String,Stock> stock= new HashMap<>();
+	
+	public Customer(String firstName, String lastName, String email, String mobileNumber,String address ,String password,int walletBalance
+			) {
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.mobileNumber = mobileNumber;
 		this.password = password;
 		this.address = address;
+		this.walletBalance=walletBalance;
 	}
 	public Customer() {
 		super();
@@ -67,23 +68,18 @@ public class Customer implements Serializable{
 	public void setWalletBalance(int walletBalance) {
 		this.walletBalance = walletBalance;
 	}
-	public Map<String, Integer> getStock() {
+	public Map<String, Stock> getStock() {
 		return stock;
 	}
-	public void setStock(Map<String, Integer> stock) {
+	public void setStock(Map<String, Stock> stock) {
 		this.stock = stock;
 	}
-	public List<String> getTransaction() {
-		return transaction;
-	}
-	public void setTransaction(List<String> transaction) {
-		this.transaction = transaction;
-	}
+	
 	@Override
 	public String toString() {
 		return "Customer [Full Name = " + firstName +" "+ lastName+ "email=" + email + ", mobileNumber="
 				+ mobileNumber + ", password=" + password + ", address=" + address + ", walletBalance=" + walletBalance
 				+ ", Number of stock=" + stock.size() + "]";
-	}
+	} 
 	
 }
