@@ -1,9 +1,12 @@
 # worried-way-9596
 **Welcome to Stock Broker System**
+
 **Stock Broker System**
+
 This is a stock broker system that allows users to buy and sell stocks on the stock market. The system is designed to be user-friendly and provide users with real-time information about stock prices and trends.
 
 **Getting Started**
+
 To get started with the stock broker system, you will need to create an account. Once you have created an account, you can log in to the system and start buying and selling stocks.
 
 **Features**
