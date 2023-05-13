@@ -38,6 +38,13 @@ We welcome contributions to the stock broker system. If you would like to contri
 **License**
 
 The stock broker system is licensed under the MIT License.
+**There is three parts**
+
+1. Admin Login
+2. Customer Login
+3. Customer Signup
+
+![stock1](https://github.com/chandansharma65914/worried-way-9596/assets/109021997/13f90192-0c10-482e-ad0d-a5615bab8869)
 
 ** **The role of Broker****
 
@@ -52,6 +59,9 @@ wallet then set account inactive i.e. customer can only withdraw money)
 7. Delete stock (means the total amount for that stock should be credited to the
 customer’s wallet and then mark the stock deleted from the database)
 
+          ![stock2](https://github.com/chandansharma65914/worried-way-9596/assets/109021997/4d233f41-e7d9-4bb5-8f8f-cfd3719248ea)
+
+
 **The role of Customer**
 1. The Customer can sign-up. At the time of sign up first name, last name, username,
 password, address, mobile number, and email should be taken.
@@ -60,3 +70,4 @@ password, address, mobile number, and email should be taken.
 4. Buy and sell stocks.
 5. View his own transaction History
 6. Add & withdraw funds to & from your wallet.
+          ![stock3](https://github.com/chandansharma65914/worried-way-9596/assets/109021997/1a5b2b27-016e-4e20-a939-6692c231ff03)
