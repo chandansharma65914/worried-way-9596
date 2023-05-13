@@ -1,6 +1,5 @@
 # worried-way-9596
 **Welcome to Stock Broker System**
-
 **Stock Broker System**
 This is a stock broker system that allows users to buy and sell stocks on the stock market. The system is designed to be user-friendly and provide users with real-time information about stock prices and trends.
 
